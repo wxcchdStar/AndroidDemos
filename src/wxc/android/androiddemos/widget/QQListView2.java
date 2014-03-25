@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -33,14 +34,18 @@ public class QQListView2 extends ListView implements View.OnTouchListener  {
 	// 控制删除按钮显示
 	private boolean mIsShown = false;
 	// 删除按钮
-	private View mDeleteBtn;
+	private Button mDeleteBtn;
 	// 需要显示按钮的View
 	private ViewGroup mViewGroup;
 
 	public QQListView2(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		setOnTouchListener(this);
-		mDeleteBtn = LayoutInflater.from(context).inflate(R.layout.item_delete_button, null);
+		initDeleteView();
+	}
+	
+	private void initDeleteView () {
+		mDeleteBtn = (Button) LayoutInflater.from(getContext()).inflate(R.layout.item_delete_button, null);
 		mDeleteBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -140,7 +145,6 @@ public class QQListView2 extends ListView implements View.OnTouchListener  {
 	private void hideDeleteBtn() {
 		if (mViewGroup !=null ) {
 			mViewGroup.removeView(mDeleteBtn);
-			mViewGroup = null;
 		}
 		Toast.makeText(getContext(), "hide", Toast.LENGTH_SHORT).show();
 	}

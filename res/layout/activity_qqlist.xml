@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <wxc.android.androiddemos.widget.QQListView2
+    <wxc.android.androiddemos.widget.QQListView3
         android:id="@+id/qqlv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:listSelector="@android:color/transparent" >
-    </wxc.android.androiddemos.widget.QQListView2>
+    </wxc.android.androiddemos.widget.QQListView3>
 
 </LinearLayout>

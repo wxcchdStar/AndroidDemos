@@ -1,17 +1,19 @@
 package wxc.android.androiddemos;
 
-import wxc.android.androiddemos.widget.QQListView2;
+import wxc.android.androiddemos.widget.QQListView3;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class QQListActivity extends Activity {
-	private QQListView2 mList;
+	private QQListView3 mList;
 	private QQListAdapter mAdapter;
 	
 	@Override
@@ -19,9 +21,18 @@ public class QQListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_qqlist);
 		
-		mList = (QQListView2) findViewById(R.id.qqlv);
+		mList = (QQListView3) findViewById(R.id.qqlv);
 		mAdapter = new QQListAdapter(this);
 		mList.setAdapter(mAdapter);
+		mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				Toast.makeText(QQListActivity.this, "item clicked!", Toast.LENGTH_SHORT).show();
+			}
+			
+		});
 	}
 	
 	public static class QQListAdapter extends BaseAdapter {
