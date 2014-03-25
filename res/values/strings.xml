@@ -3,6 +3,11 @@
 
     <string name="app_name">AndroidDemos</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+
+    <!-- main -->
+    <string name="main_enter_qqlist">Enter QQ List</string>
+    
+    <!-- common -->
+    <string name="common_delete">删除</string>
 
 </resources>
