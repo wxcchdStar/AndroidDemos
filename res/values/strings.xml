@@ -5,7 +5,9 @@
     <string name="action_settings">Settings</string>
 
     <!-- main -->
-    <string name="main_enter_qqlist">Enter QQ List</string>
+    <string name="main_qqlist">QQ List</string>
+    <string name="main_scroller">Scroller</string>
+    <string name="main_quick_index">字母快速索引</string>
     
     <!-- common -->
     <string name="common_delete">删除</string>

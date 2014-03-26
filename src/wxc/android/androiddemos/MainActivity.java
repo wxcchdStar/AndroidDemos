@@ -12,6 +12,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		findViewById(R.id.btn_enter_qqlist).setOnClickListener(this);
+		findViewById(R.id.btn_scroller).setOnClickListener(this);
+		findViewById(R.id.btn_quick_index).setOnClickListener(this);
 	}
 
 	@Override
@@ -19,6 +21,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		switch (v.getId()) {
 		case R.id.btn_enter_qqlist:
 			startActivity(QQListActivity.class);
+			break;
+		case R.id.btn_scroller:
+			startActivity(ScrollerActivity.class);
+			break;
+		case R.id.btn_quick_index:
+			startActivity(AlphabetIndexActivity.class);
 			break;
 		default:
 			break;

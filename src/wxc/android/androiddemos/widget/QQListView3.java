@@ -2,7 +2,6 @@ package wxc.android.androiddemos.widget;
 
 import wxc.android.androiddemos.R;
 import android.content.Context;
-import android.drm.DrmStore.Action;
 import android.graphics.PointF;
 import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
@@ -37,8 +36,6 @@ public class QQListView3 extends ListView implements View.OnTouchListener  {
 	private boolean mIsFling = false;
 	// 控制删除按钮显示
 	private boolean mIsShown = false;
-	// 动画是否播放
-	private boolean mIsPlay = false;
 	// 删除按钮视图
 	private View mDeleteView;
 	// 删除按钮
@@ -179,13 +176,11 @@ public class QQListView3 extends ListView implements View.OnTouchListener  {
 
 			@Override
 			public void onAnimationStart(Animation animation) {
-				mIsPlay = true;
 			}
 
 			@Override
 			public void onAnimationEnd(Animation animation) {
 				mShadeView.setVisibility(View.GONE);
-				mIsPlay = false;
 			}
 
 			@Override
@@ -207,14 +202,12 @@ public class QQListView3 extends ListView implements View.OnTouchListener  {
 
 				@Override
 				public void onAnimationStart(Animation animation) {
-					mIsPlay = true;
 					mShadeView.setVisibility(View.VISIBLE);
 				}
 
 				@Override
 				public void onAnimationEnd(Animation animation) {
 					mViewGroup.removeView(mDeleteView);
-					mIsPlay = false;
 				}
 
 				@Override
