@@ -26,5 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/main_quick_index" />
+    
+    <Button
+        android:id="@+id/btn_path_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_path_effect" />
 
 </LinearLayout>
