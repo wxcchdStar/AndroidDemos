@@ -15,7 +15,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		findViewById(R.id.btn_scroller).setOnClickListener(this);
 		findViewById(R.id.btn_quick_index).setOnClickListener(this);
 		findViewById(R.id.btn_path_effect).setOnClickListener(this);
-		
+		findViewById(R.id.btn_wx_shake).setOnClickListener(this);
 	}
 
 	@Override
@@ -33,6 +33,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		case R.id.btn_path_effect:
 			startActivity(PathEffectActivity.class);
 			break;
+		case R.id.btn_wx_shake:
+			startActivity(ShakeActivity.class);
 		default:
 			break;
 		}

@@ -9,6 +9,7 @@
     <string name="main_scroller">Scroller</string>
     <string name="main_quick_index">字母快速索引</string>
     <string name="main_path_effect">PathEffect</string>
+    <string name="main_wx_shake">微信摇一摇</string>
     
     <!-- common -->
     <string name="common_delete">删除</string>

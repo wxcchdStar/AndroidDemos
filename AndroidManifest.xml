@@ -39,6 +39,10 @@
             android:name=".PathEffectActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name=".ShakeActivity"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
