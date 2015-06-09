@@ -23,7 +23,7 @@ import android.widget.Toast;
 /**
  * 左滑显示删除按钮，添加动画
  * 
- * @author WXC
+ * @author Chenhd
  *
  */
 public class QQListView3 extends ListView implements View.OnTouchListener  {

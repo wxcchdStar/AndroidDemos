@@ -41,12 +41,6 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:text="@string/main_wx_shake" />
-
-		<Button
-			android:id="@+id/btn_scrollview_and_listview"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/main_scrollview_and_listview" />
 	    
 	 </LinearLayout>
 

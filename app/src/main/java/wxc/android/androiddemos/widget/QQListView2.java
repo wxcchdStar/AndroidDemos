@@ -20,9 +20,10 @@ import android.widget.Toast;
  * 左滑显示删除按钮，显示时任何touch事件均视为消除删除按钮
  * 实现方式：设置OnTouchListener，手动检测DOWN、UP、MOVE三个Touch事件。
  * 
- * @author WXC
+ * @author Chenhd
  *
  */
+@Deprecated
 public class QQListView2 extends ListView implements View.OnTouchListener  {
 	private static final String TAG = "QQListView2";
 	// 计算滑动速度

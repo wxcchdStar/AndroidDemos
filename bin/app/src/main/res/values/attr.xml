@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AlphabetIndexListView">
+        <attr name="showLetterSide" format="dimension" />
+        <attr name="indexerWidth" format="dimension" />
+        <attr name="indexBarBackgroudColor" format="color" />
+        <attr name="indexBarTextColor" format="color" />
+        <attr name="showLetterBackgroundColor" format="color" />
+        <attr name="showLetterColor" format="color" />
+    </declare-styleable>
+    
+</resources>

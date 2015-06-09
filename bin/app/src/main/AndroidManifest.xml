@@ -43,10 +43,6 @@
             android:name=".activity.ShakeActivity"
             android:label="@string/app_name" >
         </activity>
-        <activity
-            android:name=".activity.ListScrollViewActivity"
-            android:label="@string/app_name" >
-        </activity>
     </application>
 
 </manifest>

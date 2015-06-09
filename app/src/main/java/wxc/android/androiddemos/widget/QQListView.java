@@ -17,7 +17,7 @@ import android.widget.ListView;
  * 
  * 太过麻烦，而且不一定可以具体实现想要的效果，因此不采用
  * 
- * @author WXC
+ * @author Chenhd
  *
  */
 @Deprecated

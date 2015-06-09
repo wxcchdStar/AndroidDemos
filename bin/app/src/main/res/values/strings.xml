@@ -10,7 +10,6 @@
     <string name="main_quick_index">字母快速索引</string>
     <string name="main_path_effect">PathEffect</string>
     <string name="main_wx_shake">微信摇一摇</string>
-    <string name="main_scrollview_and_listview">ScrollView内嵌ListView</string>
     
     <!-- common -->
     <string name="common_delete">删除</string>
