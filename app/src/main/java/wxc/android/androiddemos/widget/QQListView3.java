@@ -26,6 +26,7 @@ import android.widget.Toast;
  * @author Chenhd
  *
  */
+@Deprecated
 public class QQListView3 extends ListView implements View.OnTouchListener  {
 	private static final String TAG = "QQListView3";
 	// 计算滑动速度

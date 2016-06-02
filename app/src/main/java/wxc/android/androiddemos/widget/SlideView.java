@@ -4,7 +4,6 @@ import wxc.android.androiddemos.R;
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -27,14 +26,20 @@ public class SlideView extends LinearLayout implements View.OnTouchListener {
 	}
 	
 	private void init() {
-		mHolderWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 64, 
-				getContext().getResources().getDisplayMetrics());
-		setOrientation(LinearLayout.HORIZONTAL);
-		mScroller = new Scroller(getContext());
-		View.inflate(getContext(), R.layout.item_slide, this);
-		setOnTouchListener(this);
+		if (mScroller == null) {
+			mScroller = new Scroller(getContext());
+			setOrientation(LinearLayout.HORIZONTAL);
+			View.inflate(getContext(), R.layout.item_slide, this);
+			setOnTouchListener(this);
+		}
 	}
-	
+
+	@Override
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+		mHolderWidth = findViewById(R.id.rl_holder).getMeasuredWidth();
+	}
+
 	@Override
 	public boolean onTouch(View v, MotionEvent event) {
 		int x = (int) event.getX();
@@ -68,7 +73,7 @@ public class SlideView extends LinearLayout implements View.OnTouchListener {
 			if (scrollX - mHolderWidth * 0.75 > 0) {
 				newScrollX2 = mHolderWidth;
 			}
-			smoothScrollTo(newScrollX2, 0);
+			smoothScrollTo(newScrollX2);
 			break;
 		}
 		mLastX = x;
@@ -76,7 +81,7 @@ public class SlideView extends LinearLayout implements View.OnTouchListener {
 		return true;
 	}
 	
-	private void smoothScrollTo(int destX, int destY) {
+	private void smoothScrollTo(int destX) {
 		int scrollX = getScrollX();
 		int delta = destX - scrollX;
 		mScroller.startScroll(scrollX, 0, delta, 0);
@@ -88,7 +93,7 @@ public class SlideView extends LinearLayout implements View.OnTouchListener {
 		super.computeScroll();
 		if (mScroller.computeScrollOffset()) {
 			scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
-			invalidate();
+			postInvalidate();
 		}
 	}
 

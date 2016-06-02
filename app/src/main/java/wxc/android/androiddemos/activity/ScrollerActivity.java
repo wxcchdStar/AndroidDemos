@@ -1,11 +1,11 @@
 package wxc.android.androiddemos.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import wxc.android.androiddemos.R;
 
-public class ScrollerActivity extends Activity {
+public class ScrollerActivity extends AppCompatActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

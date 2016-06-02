@@ -2,9 +2,9 @@ package wxc.android.androiddemos.activity;
 
 import wxc.android.androiddemos.R;
 import wxc.android.androiddemos.widget.QQListView3;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class QQListActivity extends Activity {
+public class QQListActivity extends AppCompatActivity {
 	private QQListView3 mList;
 	private QQListAdapter mAdapter;
 	
@@ -68,7 +68,7 @@ public class QQListActivity extends Activity {
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			TextView contentTv = null;
+			TextView contentTv;
 			if (convertView == null) {
 				convertView = LayoutInflater.from(mContext).inflate(R.layout.item_qqlist, null);
 				contentTv = (TextView) convertView.findViewById(R.id.tv_content);

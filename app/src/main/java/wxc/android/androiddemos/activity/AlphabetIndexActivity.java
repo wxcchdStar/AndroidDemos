@@ -2,10 +2,10 @@ package wxc.android.androiddemos.activity;
 
 import wxc.android.androiddemos.R;
 import wxc.android.androiddemos.widget.AlphabetIndexListView;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +14,7 @@ import android.widget.BaseAdapter;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
-public class AlphabetIndexActivity extends Activity {
+public class AlphabetIndexActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,7 @@ public class AlphabetIndexActivity extends Activity {
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
-			TextView wordTv = null;
+			TextView wordTv;
 			if (convertView == null) {
 				wordTv = new TextView(mContext);
 				wordTv.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, 
@@ -92,7 +92,7 @@ public class AlphabetIndexActivity extends Activity {
 				wordTv.setTextColor(Color.BLACK);
 				wordTv.setBackgroundColor(Color.TRANSPARENT);
 			}
-			return wordTv;
+			return convertView;
 		}
 
 		@Override

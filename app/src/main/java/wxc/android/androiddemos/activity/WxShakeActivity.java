@@ -2,9 +2,9 @@ package wxc.android.androiddemos.activity;
 
 import wxc.android.androiddemos.R;
 import wxc.android.androiddemos.model.ShakeDetector;
-import android.app.Activity;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class ShakeActivity extends Activity implements ShakeDetector.Listener {
+public class WxShakeActivity extends AppCompatActivity implements ShakeDetector.Listener {
 	private ShakeDetector mShakeDetector;
 	private SensorManager mSensorManager;
 	
